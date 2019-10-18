@@ -7,11 +7,21 @@ import { FooterService } from './footer.service';
  */
 @Component({
   selector: 'mk-layout-footer-left',
-  template: '<ng-template #templateRef><ng-content></ng-content></ng-template>'
+  template: `
+              <ng-template #templateRef>
+                <ng-content></ng-content>
+              </ng-template>`
 })
 export class FooterLeftComponent {
-  @ViewChild('templateRef') public templateRef: TemplateRef<any>;
+  
+  @ViewChild('templateRef') 
+  public templateRef: TemplateRef<any>;
 }
+
+
+
+
+
 
 /**
  * Footer Right
@@ -30,8 +40,12 @@ export class FooterRightComponent {
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  @ContentChild(FooterLeftComponent) public footerLeftComponent: FooterLeftComponent;
-  @ContentChild(FooterRightComponent) public footerRightComponent: FooterRightComponent;
+  
+  @ContentChild(FooterLeftComponent) 
+  public footerLeftComponent: FooterLeftComponent;
+
+  @ContentChild(FooterRightComponent) 
+  public footerRightComponent: FooterRightComponent;
 
   constructor(
     private elementRef: ElementRef,
