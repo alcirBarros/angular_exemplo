@@ -80,7 +80,7 @@ const routes: Routes = [
             path: 'box',
             loadChildren: './+boxs/box-default/box-default.module#BoxDefaultModule',
             data: {
-              title: 'Box'
+              title: 'Default Box'
             }
           },
           {
