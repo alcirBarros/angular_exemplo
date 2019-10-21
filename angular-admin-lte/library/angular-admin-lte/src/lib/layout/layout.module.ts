@@ -6,7 +6,6 @@ import { ContentModule } from './content/content.module';
 import { FooterModule } from './footer/footer.module';
 import { HeaderModule } from './header/header.module';
 import { SidebarLeftModule } from './sidebar-left/sidebar-left.module';
-import { SidebarRightModule } from './sidebar-right/sidebar-right.module';
 import { WrapperModule } from './wrapper/wrapper.module';
 
 import { LayoutService } from './layout.service';
@@ -15,14 +14,13 @@ import { layoutProvider } from './layout.provider';
 
 import { RoutingService } from '../services/routing.service';
 import { WrapperService } from './wrapper/wrapper.service';
-import { SidebarRightService } from './sidebar-right/sidebar-right.service';
 import { HeaderService } from './header/header.service';
 import { FooterService } from './footer/footer.service';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  exports: [ContentModule, FooterModule, HeaderModule, SidebarLeftModule, SidebarRightModule, WrapperModule],
-  providers: [RoutingService, WrapperService, SidebarRightService, HeaderService, FooterService]
+  exports: [ContentModule, FooterModule, HeaderModule, SidebarLeftModule, WrapperModule],
+  providers: [RoutingService, WrapperService, HeaderService, FooterService]
 })
 export class LayoutModule {
 

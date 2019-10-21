@@ -18,11 +18,6 @@ export class FooterLeftComponent {
   public templateRef: TemplateRef<any>;
 }
 
-
-
-
-
-
 /**
  * Footer Right
  */

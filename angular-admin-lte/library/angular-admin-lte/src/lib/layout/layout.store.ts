@@ -10,6 +10,7 @@ export class LayoutStore {
   public readonly layoutState: Observable<LayoutState>;
 
   private _layoutState: BehaviorSubject<LayoutState>;
+  
   private readonly initialLayoutState: LayoutState = {
     isSidebarLeftCollapsed: false,
     isSidebarLeftExpandOnOver: false,

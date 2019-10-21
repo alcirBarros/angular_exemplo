@@ -5,7 +5,6 @@ import { Title } from '@angular/platform-browser';
 import { LayoutStore } from '../layout.store';
 
 import { RoutingService } from '../../services/routing.service';
-import { SidebarRightService } from '../sidebar-right/sidebar-right.service';
 import { HeaderService } from '../header/header.service';
 import { FooterService } from '../footer/footer.service';
 
@@ -49,7 +48,7 @@ export class ContentComponent implements OnInit, OnDestroy {
     private titleService: Title,
     private elementRef: ElementRef,
     private changeDetectorRef: ChangeDetectorRef,
-    private sidebarRightService: SidebarRightService,
+   // private sidebarRightService: SidebarRightService,
     private headerService: HeaderService,
     private footerService: FooterService,
     private router: Router
@@ -135,17 +134,7 @@ export class ContentComponent implements OnInit, OnDestroy {
 
       if (this.layout === 'fixed') {
         heightStyle = this.windowInnerHeight - this.footerService.offsetHeight;
-      } else {
-        const sidebarRight =
-          this.sidebarRightService.scrollHeight ?
-            this.sidebarRightService.scrollHeight - this.headerService.offsetHeight : 0;
-
-        heightStyle = Math.max(
-          this.windowInnerHeight - headerFooterOffsetHeight,
-          this.sidebarLeftHeight - this.headerService.offsetHeight,
-          sidebarRight
-        );
-      }
+      } 
 
       if (heightStyle && heightStyle !== this.heightStyle) {
         if (this.scrollHeight > heightStyle) {
