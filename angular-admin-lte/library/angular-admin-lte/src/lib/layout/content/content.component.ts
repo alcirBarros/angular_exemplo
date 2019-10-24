@@ -6,7 +6,7 @@ import { LayoutStore } from '../layout.store';
 
 import { RoutingService } from '../../services/routing.service';
 import { HeaderService } from '../header/header.service';
-import { FooterService } from '../footer/footer.service';
+//import { FooterService } from '../footer/footer.service';
 
 import { removeSubscriptions } from '../../helpers';
 
@@ -30,18 +30,7 @@ export class ContentComponent implements OnInit, OnDestroy {
 
   @ViewChild('contentInnerElement') private contentInnerElement: ElementRef;
 
-  /**
-   * @method constructor
-   * @param layoutStore
-   * @param routingService
-   * @param titleService
-   * @param elementRef
-   * @param changeDetectorRef
-   * @param sidebarRightService
-   * @param headerService
-   * @param footerService
-   * @param router
-   */
+
   constructor(
     private layoutStore: LayoutStore,
     private routingService: RoutingService,
@@ -50,7 +39,7 @@ export class ContentComponent implements OnInit, OnDestroy {
     private changeDetectorRef: ChangeDetectorRef,
    // private sidebarRightService: SidebarRightService,
     private headerService: HeaderService,
-    private footerService: FooterService,
+    //private footerService: FooterService,
     private router: Router
   ) {}
 
@@ -129,12 +118,6 @@ export class ContentComponent implements OnInit, OnDestroy {
   private setContentMinHeight(): void {
     if (this.navigationEnd) {
       let heightStyle;
-
-      const headerFooterOffsetHeight = this.headerService.offsetHeight + this.footerService.offsetHeight;
-
-      if (this.layout === 'fixed') {
-        heightStyle = this.windowInnerHeight - this.footerService.offsetHeight;
-      } 
 
       if (heightStyle && heightStyle !== this.heightStyle) {
         if (this.scrollHeight > heightStyle) {

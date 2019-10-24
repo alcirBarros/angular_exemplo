@@ -9,21 +9,9 @@
         <mk-layout-sidebar-left></mk-layout-sidebar-left>
 
         <mk-layout-content>
-            <div mk-layout-content-before-header>
-                <div *mkLoadingPage="{checkPendingHttp: true, checkPendingRoute: true}">
-                    <mk-material-bar></mk-material-bar>
-                </div>
-            </div>
             <router-outlet></router-outlet>
         </mk-layout-content>
-        <mk-layout-footer>
-            <mk-layout-footer-left>
-                <strong> Footer <a href="http://footer.com">Footer</a>.</strong>
-            </mk-layout-footer-left>
-            <mk-layout-footer-right>
-                <b>Version</b> 2.4.2
-            </mk-layout-footer-right>
-        </mk-layout-footer>
+
 
     </mk-layout-wrapper>
 </ng-template>

@@ -9,17 +9,15 @@ import { LayoutModule } from 'angular-admin-lte';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-
-import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
-//import { LayoutModule} from './layout/layout.module';
-
+import { MaterialBarModule, LoadingPageModule } from 'angular-loading-page';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule.forRoot(adminLteConf),
-    LoadingPageModule, MaterialBarModule
+    LoadingPageModule,
+    MaterialBarModule
   ],
   declarations: [
     AppComponent,
