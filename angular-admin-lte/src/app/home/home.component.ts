@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 
-import * as Prism from 'prismjs';
+//import * as Prism from 'prismjs';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,6 @@ export class HomeComponent implements AfterViewInit {
    * @method ngAfterViewInit
    */
   ngAfterViewInit() {
-    Prism.highlightAll();
+ //   Prism.highlightAll();
   }
 }

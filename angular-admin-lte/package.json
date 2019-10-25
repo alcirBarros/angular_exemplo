@@ -1,16 +1,6 @@
 {
   "name": "angular-admin-lte-demo",
   "version": "2.0.1",
-  "keywords": [
-    "angular",
-    "angular 2",
-    "angular 4",
-    "angular 5",
-    "angular 6",
-    "angular 7",
-    "typescript",
-    "admin-lte"
-  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -25,15 +15,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mledour/angular-admin-lte.git"
-  },
-  "author": {
-    "name": "Mik@",
-    "email": "michael.ledour@gmail.com"
-  },
-  "license": "MIT",
   "private": false,
   "dependencies": {
     "@angular/animations": "^7.2.3",
