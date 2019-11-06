@@ -9,7 +9,7 @@ import { SidebarLeftComponent } from './sidebar-left.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AnimationsModule],
-    exports: [SidebarLeftComponent],
-    declarations: [SidebarLeftToggleDirective, SidebarLeftComponent]
+    declarations: [SidebarLeftToggleDirective, SidebarLeftComponent],
+    exports: [SidebarLeftComponent]
 })
 export class SidebarLeftModule {}

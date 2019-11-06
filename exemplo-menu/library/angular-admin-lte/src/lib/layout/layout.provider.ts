@@ -19,11 +19,13 @@ export function layoutStoreFactory(layoutConfig: LayoutState): LayoutStore {
  * [layoutProviders description]
  */
 export function layoutProvider(layoutConfig: LayoutState) {
-  return [{
+  return [
+    {
       provide: LayoutStore,
       useFactory: layoutStoreFactory,
       deps: [LayoutConfigToken]
-    }, {
+    }, 
+    {
       provide: LayoutConfigToken,
       useValue: layoutConfig
     }

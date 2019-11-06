@@ -45,10 +45,17 @@ export class LayoutModule {
    * @return [description]
    */
   static forRoot(layoutConfig: LayoutState): ModuleWithProviders {
-    return {
+
+    const layout = layoutProvider(layoutConfig);
+
+    var object:any = {
       ngModule: LayoutModule,
-      providers: [...layoutProvider(layoutConfig), LayoutService]
+      providers: [
+        layout, 
+        LayoutService]
     };
+
+    return object;
   }
 }
 

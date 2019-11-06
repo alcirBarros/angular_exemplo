@@ -5,11 +5,13 @@ import { adminLteConf } from './admin-lte.conf';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { LayoutModule } from 'angular-admin-lte';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialBarModule, LoadingPageModule } from 'angular-loading-page';
+import { LayoutModule } from 'library/angular-admin-lte/src/lib/layout/layout.module';
+//import { LayoutModule } from 'angular-admin-lte';
 
 @NgModule({
   imports: [
